@@ -40,12 +40,10 @@ amount=amount-amt;
 System.out.println(amt+" withdrawn");
 }
 }
-//method to check the balance of the account
 void checkBalance()
 {
 System.out.println("Balance is: "+amount);
 }
-//method to display the values of an object
 void display()
 {
 System.out.println(acc_no+" "+name+" "+amount);
@@ -55,10 +53,13 @@ System.out.println(acc_no+" "+name+" "+amount);
 class TestAccount
  
 {
-public static void main(String[] args)
-{
+public static void main(String[] args){
+Scanner scan=new Scanner(System.in);
+int id =scan.nextInt();
+String name =scan.next();
+Double amt=scan.nextDouble();
 Account a1=new Account();
-a1.insert(832345,"Ankit",1000);
+a1.insert();
 a1.display();
 a1.checkBalance();
 a1.deposit(40000);
